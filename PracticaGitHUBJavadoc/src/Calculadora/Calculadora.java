@@ -1,10 +1,15 @@
 package Calculadora;
-
+/*
+ * @version 04/03/2018
+ */
 public class Calculadora {
 
 	double op1;
 	double op2;
 	
+	/*
+	 * @param op1,op2: creamos los parametros para las operaciones.
+	 */
 	
 	public Calculadora(double op1, double op2) {
 		this.op1 = op1;
@@ -13,20 +18,37 @@ public class Calculadora {
 	
 	public double suma(double num1, double num2) {
 		return op1+op2;
+		
+		/*
+		 * @return op1+op2 : devuelve la suma de op1 y op2.
+		 */
 	}
 	
 	public double resta(double num1, double num2) {
 		return op1-op2;
+		/*
+		 * @return op1-op2 : devuelve la resta de op1 y op2
+		 */
 	}
 	
 	public double division(double num1, double num2) {
 		if(op2==0) {
 			throw new IllegalArgumentException("El divisor es 0");
+			/*
+			 * Imprime por pantlla "El divisor es 0 " si hay un error
+			 */
 		}
 		return op1/op2;
+		/*
+		 * @return op1/op2 : devuelve la division entre op1 y op2
+		 */
+		
 	}
 	
-	public double potencia(double num1, double num2) {
+	public double potencia(double op1, double op2) {
+		/*
+		 * @return devuelve la variable op2 elevada a op1
+		 */
 		if(op1==0) {
 			return 1;
 		}
